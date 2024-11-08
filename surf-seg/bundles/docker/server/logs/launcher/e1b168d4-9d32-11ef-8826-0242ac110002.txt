@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/deploy/server/venv/lib/python3.9/site-packages/aiohttp/web_urldispatcher.py", line 562, in __init__
+    directory = Path(directory).expanduser().resolve(strict=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1205, in resolve
+    s = self._flavour.resolve(self, strict=strict)
+  File "/usr/lib/python3.9/pathlib.py", line 363, in resolve
+    return _resolve(base, str(path)) or sep
+  File "/usr/lib/python3.9/pathlib.py", line 347, in _resolve
+    target = accessor.readlink(newpath)
+  File "/usr/lib/python3.9/pathlib.py", line 452, in readlink
+    return os.readlink(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/deploy/server/venv/lib/python3.9/site-packages/surf_seg/module/serve'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/deploy/server/venv/bin/surf-seg", line 8, in <module>
+    sys.exit(main())
+  File "/deploy/server/venv/lib/python3.9/site-packages/surf_seg/app/main.py", line 5, in main
+    app.server.start(**kwargs)
+  File "/deploy/server/venv/lib/python3.9/site-packages/trame_server/core.py", line 687, in start
+    task = CoreServer.server_start(
+  File "/deploy/server/venv/lib/python3.9/site-packages/trame_server/protocol.py", line 50, in server_start
+    return server.start_webserver(
+  File "/deploy/server/venv/lib/python3.9/site-packages/wslink/server.py", line 258, in start_webserver
+    ws_server = create_webserver(server_config, backend=backend)
+  File "/deploy/server/venv/lib/python3.9/site-packages/wslink/server.py", line 168, in create_webserver
+    return backends.create_webserver(server_config, backend=backend)
+  File "/deploy/server/venv/lib/python3.9/site-packages/wslink/backends/__init__.py", line 5, in create_webserver
+    return create_webserver(server_config)
+  File "/deploy/server/venv/lib/python3.9/site-packages/wslink/backends/aiohttp/__init__.py", line 194, in create_webserver
+    return WebAppServer(server_config)
+  File "/deploy/server/venv/lib/python3.9/site-packages/wslink/backends/aiohttp/__init__.py", line 93, in __init__
+    self.app.add_routes(routes)
+  File "/deploy/server/venv/lib/python3.9/site-packages/aiohttp/web_app.py", line 386, in add_routes
+    return self.router.add_routes(routes)
+  File "/deploy/server/venv/lib/python3.9/site-packages/aiohttp/web_urldispatcher.py", line 1277, in add_routes
+    registered_routes.extend(route_def.register(self))
+  File "/deploy/server/venv/lib/python3.9/site-packages/aiohttp/web_routedef.py", line 98, in register
+    resource = router.add_static(self.prefix, self.path, **self.kwargs)
+  File "/deploy/server/venv/lib/python3.9/site-packages/aiohttp/web_urldispatcher.py", line 1201, in add_static
+    resource = StaticResource(
+  File "/deploy/server/venv/lib/python3.9/site-packages/aiohttp/web_urldispatcher.py", line 564, in __init__
+    raise ValueError(f"'{directory}' does not exist") from error
+ValueError: '/deploy/server/venv/lib/python3.9/site-packages/surf_seg/module/serve' does not exist

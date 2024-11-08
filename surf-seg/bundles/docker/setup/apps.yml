@@ -1,0 +1,6 @@
+trame: # Default app under /index.html
+  www_modules:
+    - surf_seg.module
+  app: surf-seg
+surf-seg: # /surf-seg.html
+  app: surf-seg

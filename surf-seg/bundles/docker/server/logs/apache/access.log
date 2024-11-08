@@ -1,0 +1,6 @@
+172.17.0.1 - - [07/Nov/2024:18:05:33 +0000] "GET / HTTP/1.1" 200 1001 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+172.17.0.1 - - [07/Nov/2024:18:05:33 +0000] "GET /assets/index-e80c1ba5.css HTTP/1.1" 200 795 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+172.17.0.1 - - [07/Nov/2024:18:05:33 +0000] "GET /assets/index-2099f53b.js HTTP/1.1" 200 32672 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+172.17.0.1 - - [07/Nov/2024:18:05:33 +0000] "GET /vue.global.js HTTP/1.1" 200 54014 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+172.17.0.1 - - [07/Nov/2024:18:05:33 +0000] "GET /loading.tpl HTTP/1.1" 304 180 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+172.17.0.1 - - [07/Nov/2024:18:05:33 +0000] "POST /paraview/ HTTP/1.1" 503 305 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
