@@ -22,7 +22,7 @@ class MyTrameApp:
         if self.server.hot_reload:
             self.server.controller.on_server_reload.add(self._build_ui)
         logging.debug('surface segmentation')
-        self.surf = SurfSeg('/home/jphardee/Desktop/Kitware/trame-surf-seg/surf-seg/tests/vertices.txt')
+        # self.surf = SurfSeg('/home/jphardee/Desktop/Kitware/trame-surf-seg/surf-seg/tests/vertices.txt')
         logging.debug('build ui')
         self.ui = self._build_ui()
 
@@ -67,6 +67,7 @@ class MyTrameApp:
                     click=self.ctrl.widget_click,
                     change=self.ctrl.widget_change,
                 )
+                my_widgets.D3Widget()
                 vuetify3.VSpacer()
                 vuetify3.VSlider(                    # Add slider
                     v_model=("resolution", 6),      # bind variable with an initial value of 6
@@ -79,13 +80,13 @@ class MyTrameApp:
                     vuetify3.VIcon("mdi-undo")
 
             # Main content
-            with layout.content:
-                with vuetify3.VContainer(fluid=True, classes="pa-0 fill-height"):
-                    view =  vtk.VtkRemoteView(
-                        self.surf.surface_render_window, interactive_ratio=1
-                    )           # vtk.js view for local rendering
-                    self.ctrl.update_view = view.update
-                    self.ctrl.reset_camera = view.reset_camera  # Bind method to controller
+            # with layout.content:
+                # with vuetify3.VContainer(fluid=True, classes="pa-0 fill-height"):
+                #     view =  vtk.VtkRemoteView(
+                #         self.surf.surface_render_window, interactive_ratio=1
+                #     )           # vtk.js view for local rendering
+                #     self.ctrl.update_view = view.update
+                #     self.ctrl.reset_camera = view.reset_camera  # Bind method to controller
 
 
             # Footer

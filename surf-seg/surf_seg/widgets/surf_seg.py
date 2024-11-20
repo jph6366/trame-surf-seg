@@ -10,6 +10,7 @@ class HtmlElement(AbstractElement):
             
 __all__ = [
     "CustomWidget",
+    "D3Widget"
 ]
 
 # Expose your vue component(s)
@@ -27,3 +28,9 @@ class CustomWidget(HtmlElement):
             "click",
             "change",
         ]
+
+class D3Widget(HtmlElement):
+    def __init__(self, **kwargs):
+        super().__init__(
+            "lineChart",
+        )
